@@ -28,6 +28,7 @@ void	loop()
 		servo.write(i);
 		delay(20);
 	}
+  delay(2000);
 }
 
 // 180*15 = 2700ms = 2.7s
