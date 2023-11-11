@@ -35,4 +35,18 @@ void loop() {
 		delay(100);
 	}
   delay(2000);
+
+  //progressive:
+  	for (int i = 0; i < 90; i++)
+	{
+		servo.write(i);
+		delay(i);
+	}
+  delay(2000);
+  	for (int i = 90; i > 0; i--)
+	{
+		servo.write(i);
+		delay(i);
+	}
+  delay(2000);
 }
