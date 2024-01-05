@@ -6,9 +6,18 @@ int		lowup = 65;
 int		hup = 35;
 int		down = 90;
 int		mvmt = 200;
+int		noire;
+int		croche;
+int		dbl_croche;
+int		blanche;
+int   triolet;
 
 void  setup()
 {
+  croche = noire / 2;
+  dbl_croche = noire / 4;
+  triolet = noire / 3;
+  blanche = noire * 2;
   servo180r.attach(9);
   servo180l.attach(10);
   servo180r.write(90);
@@ -70,48 +79,77 @@ void  lhup() // left arm high up then down
 
 void	loop()
 {
-	servo180r.write(lowup);
-	servo180l.write(lowup);
-	delay(mvmt);
-	servo180r.write(down);
-	servo180l.write(down);
+	// 1st move
+	rlowup();
+	rlowup();
+	rlowup();
+	delay(1000);
+	rlowup();
+	rlowup();
+	rlowup();
+	rlowup();
+	rlowup();
+	delay(400);
+	rlowup();
+	delay(1100);
+
+	// 2nd move
+	rlowup();
+	rlowup();
+	rlowup();
+	delay(1000);
+	rlowup();
+	delay(400);
+	rlowup();
+	delay(400);
+	rlowup();
+	delay(400);
+	rlowup();
+	delay(1100);
+
+	// 1st move again
+	rlowup();
+	rlowup();
+	rlowup();
+	delay(1000);
+	rlowup();
+	rlowup();
+	rlowup();
+	rlowup();
+	rlowup();
+	delay(400);
+	rlowup();
+	delay(1100);
+
+	// rising cacaphonie
+	lhup();
+	delay(800);
+	lhup();
+	delay(400);
+	lhup();
+	delay(400);
+	rhup();
+	delay(300);
+	rlowup();
+	delay(200);
+	rlowup();
+	delay(100);
+	rlowup();
+	delay(50);
+	rlowup();
+	rlowup();
+	rlowup();
 	delay(500);
-	servo180r.write(hup);
-	servo180l.write(hup);
-	delay(mvmt);
-	servo180r.write(down);
-	servo180l.write(down);
-	delay(500);
-	delay(5000);
+	rhup();
+	lhup();
+	delay(800);
+	llowup();
+	delay(800);
+	llowup();
+	delay(800);
 	bothlowup();
-	delay(500);
-  bothhup();
-	delay(500);
-	bothlowup();
-  delay(300);
-  bothlowup();
-  delay(300);
-  bothlowup();
-  delay(300);
-  bothlowup();
-  delay(300);
-  rlowup();
-  lhup();
-  delay(200);
-  rhup();
-  rhup();
-  llowup;
-  delay(300);
-  rhup();
-  delay(200);
-  rhup();
-  llowup();
-  rlowup();
-  delay(150);
-  rhup();
-  llowup();
-  delay(500);
-  lhup();
-  rhup();
-  delay(3000);
+	delay(2500);
+
+	// rising turnaround
+	// to do
 }
