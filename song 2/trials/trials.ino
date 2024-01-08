@@ -1,5 +1,3 @@
-// actually the same as blind toccata - DEPRECATED
-
 #include <Servo.h>
 
 Servo	servo180r;
@@ -79,79 +77,18 @@ void  lhup() // left arm high up then down
   delay(100);
 }
 
-void	loop()
+void loop()
 {
-	// 1st move
-	rlowup();
-	rlowup();
-	rlowup();
-	delay(1000);
-	rlowup();
-	rlowup();
-	rlowup();
-	rlowup();
-	rlowup();
-	delay(400);
-	rlowup();
-	delay(1100);
-
-	// 2nd move
-	rlowup();
-	rlowup();
-	rlowup();
-	delay(1000);
-	rlowup();
-	delay(400);
-	rlowup();
-	delay(400);
-	rlowup();
-	delay(400);
-	rlowup();
-	delay(1100);
-
-	// 1st move again
-	rlowup();
-	rlowup();
-	rlowup();
-	delay(1000);
-	rlowup();
-	rlowup();
-	rlowup();
-	rlowup();
-	rlowup();
-	delay(400);
-	rlowup();
-	delay(1100);
-
-	// rising cacaphonie
-	lhup();
-	delay(800);
-	lhup();
-	delay(400);
-	lhup();
-	delay(400);
-	rhup();
-	delay(300);
-	rlowup();
-	delay(200);
-	rlowup();
-	delay(100);
-	rlowup();
-	delay(50);
-	rlowup();
-	rlowup();
-	rlowup();
-	delay(500);
-	rhup();
-	lhup();
-	delay(800);
-	llowup();
-	delay(800);
-	llowup();
-	delay(800);
-	bothlowup();
-	delay(2500);
-
-	// rising turnaround
-	// to do
+  rlowup();
+  delay(500);
+  llowup();
+  delay(500);
+  rhup();
+  delay(500);
+  lhup();
+  delay(500);
+  bothlowup();
+  delay(500);
+  bothhup();
+  delay(500);
 }

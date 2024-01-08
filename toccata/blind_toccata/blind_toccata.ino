@@ -1,5 +1,3 @@
-// actually the same as blind toccata - DEPRECATED
-
 #include <Servo.h>
 
 Servo	servo180r;
