@@ -6,7 +6,7 @@ int   j = 0;
 int   down = 60;
 int   up = 120;
 int   dly = 10;
-int   tempo = 1000;
+int   tempo = 669;
 int   full_tick = tempo - 600;
 int   lvl = 0;
 

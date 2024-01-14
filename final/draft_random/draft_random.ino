@@ -92,21 +92,15 @@ void  lhup() // left arm high up then down
 
 void loop()
 {
-  bothlowup();
   head.write(headown);
-  delay(100);
+  bothlowup();
   head.write(headup);
-  rlowup();
+  delay(100);
+  rhup();
   lhup();
   head.write(headown);
   delay(300);
   rlowup();
-  delay(100);
   head.write(headup);
-  rlowup();
-  delay(400);
-  llowup();
-  delay(50);
-  rlowup();
-  delay(50);
+  delay(500);
 }
